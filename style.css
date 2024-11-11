@@ -1,0 +1,68 @@
+body{
+    padding: 20px;
+    background-color:#fbf6f0 ;
+}
+#t1{
+   display: flex;
+   justify-content: center;
+   font-size: 50px;
+}
+#container1{
+    display: flex;
+    justify-content: center;
+}
+#text{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+#output {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    min-height: 40px;
+    margin-top: 10px;
+    font-size: 50px; 
+}
+#container2{
+    display: flex;
+    align-items: end;
+    flex-direction: column;  
+}
+label{
+    font-weight: bold;
+    vertical-align: baseline;
+}
+#SBL{
+    align-items: center;
+    flex-direction: row;
+    vertical-align: baseline;
+    margin-bottom: 10px;
+    width: 250px;
+    margin-left: 5px;
+    gap: 3px;
+}
+#SBR{
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 50px;
+}
+.letter {
+    position: relative;
+    display: flex;
+    margin: 0 2px; 
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
