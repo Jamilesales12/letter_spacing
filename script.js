@@ -1,6 +1,6 @@
 const textInput = document.getElementById('text');
 const output = document.getElementById('output');
-const ajustSpacing = document.getElementById('ajustSpacing');
+const ajustSpacing = document.getElementById('container2');
 const letterSpacingMap = {};
 
 function updateOutput(){
@@ -15,6 +15,7 @@ function updateOutput(){
         span.classList.add('letter');
         span.textContent = char;
         span.setAttribute('data-letter', char);
+        span.style.letterSpacing = '-1';//modificação no espaço das letras
         span.style.marginLeft = `${letterSpacingMap[char]?.left || 0}px`;
         span.style.marginRight = `${letterSpacingMap[char]?.right || 0}px`;
         output.appendChild(span)
@@ -29,14 +30,12 @@ function createajustSpacing(char){
     const controlDiv = document.createElement('div');
     controlDiv.classList.add('control');
     controlDiv.innerHTML =  `
-        <div id="container2">
-        <strong>Letra "${char}":</strong>
-        <label>Espaçamento à esquerda: <input type="range" id="SBL"  min="0" max="250" data-letter="${char}" data-side="left" value="${letterSpacingMap[char]?.left || 0}" /></label>
-        <label>Espaçamento à direita: <input type="number" id="SBR" min="0" max="250" data-letter="${char}" data-side="right" value="${letterSpacingMap[char]?.right || 0}" /></label>
-        </div>
+          <strong>${char}</strong>
+          <label>LSB: <input type="range" id="SBL"  min="-55" max="70" data-letter="${char}" data-side="left" value="${letterSpacingMap[char]?.left || 0}" /></label>
+          <label>RSB: <input type="range" id="SBR" min="-55" max="70" data-letter="${char}" data-side="right" value="${letterSpacingMap[char]?.right || 0}" /></label>    
     `;
   
- 
+    
      ajustSpacing.appendChild(controlDiv);
 
  
