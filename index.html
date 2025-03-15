@@ -7,51 +7,36 @@
     <link href="./output.css" rel="stylesheet">
     <title>Letter Spacing</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 
 <body class="mx-7">
+    <div id="logo">
+        <h1 class="text-3xl mb-7 mt-4 font-semibold">
+            LetterSpace
+        </h1>
+    </div>
+    <div>
+        <h2 class="text-xl font-medium mb-7">Spacing</h2>
+    </div>
 
-    <head>
-        <div id="logo">
-            <h1 class="text-3xl mb-7 mt-4 font-semibold">
-                LetterSpace
-            </h1>
-        </div>
-        <div>
-            <h2 class="text-xl font-medium mb-7">Spacing</h2>
-        </div>
-    </head>
     <main>
-            <div id="container1" class="flex justify-center gap-3 items-center">
-                <input type="text" id="text" class="border p-2 rounded-lg"
-                 placeholder="ex:AAABBC"
-                 >
-                <!--<select name="fonte" id="fontselect">
-                    <option value="">fonte</option>
-                </select>-->
-                <div class="gap-4">
-                    <input class="w-64 cursor-pointer" id="textSize" type="range" value="20" min="14" max="36">
-                </div>
+        <div id="container1" class="fixed top-[150px] left-1/2 transform -translate-x-1/2 flex justify-center gap-3 items-center">
+            <input type="text" id="text" class="border p-2 rounded-lg" placeholder="ex:AAABBC">
+            <input type="file" id="fontSelect" accept=".ttf,.otf,.woff,.woff2"> <!-- Corrigido o ID -->
+            <div class="gap-4">
+                <input class="w-64 cursor-pointer" id="textSize" type="range" value="20" min="20" max="80">
             </div>
-            <div id="output" class="zoomoutput flex  h-[400px] justify-center items-center transition-transform duration-200"></div>
-            <div class="ajust-spacing flex justify-center items-center bg-slate-300 p-4 rounded-lg w-[350px] h-24 mb-6 overflow-y-auto " id="ajustSpacing">
-                <div class="container3 gap-2 ">
-                    <div id="container2" class="gap-2"></div>
-                </div>
-            </div>
-        <!--<div>
-            <h2>Applied in texts</h2>
         </div>
-            <div id="text-display">
-            <div class="text-box" id="original">
-                <h3>Texto Original</h3>
-                <p id="original-lorem"></p>
+
+        <div id="output" class="zoomoutput text-9xl flex h-[400px] justify-center items-center transition-transform overflow-hidden duration-200"></div>
+
+        <div class="ajust-spacing fixed bottom-2 left-1/2 transform -translate-x-1/2 flex justify-center items-center bg-slate-300 p-4 rounded-lg w-[350px] h-24 overflow-y-auto" id="ajustSpacing">
+            <div class="container3 gap-2">
+                <div id="container2" class="gap-2"></div>
             </div>
-            <div class="text-box" id="adjusted">
-                <h3>Texto Ajustado</h3>
-                <p id="adjusted-lorem"></p>
-            </div>
-        </div>-->
+        </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 
